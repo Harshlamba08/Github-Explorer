@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Explorer</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h1>GitHub Explorer</h1>
+      </div>
+      <nav class="nav">
+      <a href="#" id="homeLink">Home</a>
+      <a href="#" id="favoritesLink">Favourites</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="search-section">
+        <h2>Explore GitHub Developers</h2>
+        <p>Search any GitHub username to explore their profile</p>
+        <div class="search-box">
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter GitHub username..."
+          />
+          <button id="searchBtn">Search</button>
+        </div>
+        <p id="errorMessage"></p>
+      </section>
+
+      <section id="profile-section">
+        <img src="" alt="GitHub Profile Picture" id="avatar" />
+        <h2 id="userName">Developer Name</h2>
+        <p id="userBio">Developer bio will appear here</p>
+        <div class="profile-stats">
+          <span id="followers">Followers: 0</span>
+          <span id="following">Following: 0</span>
+        </div>
+        <button id="favoriteBtn">Add to Favourites</button>
+      </section>
+
+      <section id="repositories-section">
+        <h2>Repositories</h2>
+        <input
+          type="text"
+          id="repoSearch"
+          placeholder="Search repositories..."
+        />
+        <select id="sortRepos">
+          <option value="asc">A to Z</option>
+          <option value="desc">Z to A</option>
+        </select>
+        <div class="repo-container"></div>
+      </section>
+      <section id="favorites-section">
+  <h2>My Favourite Developers</h2>
+  <div id="favorites-container"></div>
+</section>
+    </main>
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
