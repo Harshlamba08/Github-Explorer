@@ -35,7 +35,11 @@ function filterAndSortRepositories() {
 
   renderRepositories(filteredRepos);
 }
-
+usernameInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    searchBtn.click();
+  }
+});
 searchBtn.addEventListener("click", async function () {
   const username = usernameInput.value.trim();
   if (username === "") {

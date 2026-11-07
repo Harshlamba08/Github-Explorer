@@ -6,7 +6,11 @@ export function renderRepositories(repositories) {
   const repoHTML = repositories.map((repo) => {
     return `
       <div class="repo-card">
-        <h3>${repo.name}</h3>
+        <h3>
+          <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">
+            ${repo.name}
+          </a>
+        </h3>
         <p>${repo.description || "No description available"}</p>
         <p>Language: ${repo.language || "Not specified"}</p>
       </div>
